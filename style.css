@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    /* overflow-y: hidden; */
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background:linear-gradient(45deg,#283cd1,#3a98bd,#57C785,#EDDD53);
+}
+
+#container{
+    background-color: rgba(255, 255, 255, 0.266);
+    padding: 50px 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+}
+
+#board{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.first{
+    background-color: rgba(238, 234, 234, 0.547);
+    border: 2px solid #ccc;
+    height: 120px;
+    width: 120px;   
+    /* height: 7em;
+    width: 7em; */
+    margin: 5px;
+    border-radius: 10px;
+    transition: all linear 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.first:hover {
+    background-color: #f0f0f0;
+}
+
+.first.taken {
+    pointer-events: none;
+    color: #555;
+}
+
+.winning-message {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+.second{
+    text-align: center;
+}
+
+button{
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+    /* border: none; */
+    border: none;
+    cursor: pointer;
+    background-color: #28a746d9;
+    font-size: 25px;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.player1{
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.p1same{
+    margin-bottom: 40px;
+}
+
+img{
+    height: 400px;
+    transition: linear 0.2s;
+}
+
+
+@media (max-width:1200px)    
+{
+    .player1{
+        display: none;
+    }
+}
+
+@media (max-width:500px)    
+{
+    .first{
+        height: 100px;
+        width: 100px;
+    }
+
+
+    h1{
+        font-size: 2rem;
+    }
+
+    button{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width:400px)    
+{
+    .first{
+        height: 80px;
+        width: 80px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    button{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
